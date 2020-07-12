@@ -1262,17 +1262,6 @@ Wire Wire Line
 	12200 2100 12150 2100
 Connection ~ 12150 2100
 $Comp
-L Connector:Conn_01x09_Male J10
-U 1 1 5F278798
-P 5650 4500
-F 0 "J10" H 5622 4432 50  0000 R CNN
-F 1 "Conn_01x09_Male" H 5622 4523 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 5650 4500 50  0001 C CNN
-F 3 "~" H 5650 4500 50  0001 C CNN
-	1    5650 4500
-	1    0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR014
 U 1 1 5F27CAAD
 P 5950 5000
@@ -2167,7 +2156,7 @@ AR Path="/5F2EFD7F/5F315931" Ref="L?"  Part="1"
 AR Path="/5F315931" Ref="L1"  Part="1" 
 F 0 "L1" H 3900 7765 50  0000 C CNN
 F 1 "33u" H 3900 7674 50  0000 C CNN
-F 2 "Inductor_SMD:L_0805_2012Metric" H 3900 7550 50  0001 C CNN
+F 2 "Fuse:Fuse_Bourns_MF-RHT100" H 3900 7550 50  0001 C CNN
 F 3 "~" H 3900 7550 50  0001 C CNN
 	1    3900 7550
 	1    0    0    -1  
@@ -2470,7 +2459,7 @@ AR Path="/5FB86C29/5FBBFFE1" Ref="J?"  Part="1"
 AR Path="/5FBBFFE1" Ref="J13"  Part="1" 
 F 0 "J13" H 10321 7683 50  0000 R CNN
 F 1 "AudioJack2_SwitchT" H 10321 7774 50  0000 R CNN
-F 2 "Local.pretty:PJ398SM" H 10500 7750 50  0001 C CNN
+F 2 "Local:PJ398SM" H 10500 7750 50  0001 C CNN
 F 3 "~" H 10500 7750 50  0001 C CNN
 	1    10500 7750
 	-1   0    0    1   
@@ -2520,7 +2509,7 @@ AR Path="/5FB86C29/5FE06092" Ref="J?"  Part="1"
 AR Path="/5FE06092" Ref="J14"  Part="1" 
 F 0 "J14" H 10321 8133 50  0000 R CNN
 F 1 "AudioJack2_SwitchT" H 10321 8224 50  0000 R CNN
-F 2 "Local.pretty:PJ398SM" H 10500 8200 50  0001 C CNN
+F 2 "Local:PJ398SM" H 10500 8200 50  0001 C CNN
 F 3 "~" H 10500 8200 50  0001 C CNN
 	1    10500 8200
 	-1   0    0    1   
@@ -2570,7 +2559,7 @@ AR Path="/5FB86C29/5FE2895F" Ref="J?"  Part="1"
 AR Path="/5FE2895F" Ref="J15"  Part="1" 
 F 0 "J15" H 10321 8583 50  0000 R CNN
 F 1 "AudioJack2_SwitchT" H 10321 8674 50  0000 R CNN
-F 2 "Local.pretty:PJ398SM" H 10500 8650 50  0001 C CNN
+F 2 "Local:PJ398SM" H 10500 8650 50  0001 C CNN
 F 3 "~" H 10500 8650 50  0001 C CNN
 	1    10500 8650
 	-1   0    0    1   
@@ -2620,7 +2609,7 @@ AR Path="/5FB86C29/5FE28983" Ref="J?"  Part="1"
 AR Path="/5FE28983" Ref="J16"  Part="1" 
 F 0 "J16" H 10321 9033 50  0000 R CNN
 F 1 "AudioJack2_SwitchT" H 10321 9124 50  0000 R CNN
-F 2 "Local.pretty:PJ398SM" H 10500 9100 50  0001 C CNN
+F 2 "Local:PJ398SM" H 10500 9100 50  0001 C CNN
 F 3 "~" H 10500 9100 50  0001 C CNN
 	1    10500 9100
 	-1   0    0    1   
@@ -2670,7 +2659,7 @@ AR Path="/5FB86C29/5FE74A97" Ref="J?"  Part="1"
 AR Path="/5FE74A97" Ref="J17"  Part="1" 
 F 0 "J17" H 12871 7683 50  0000 R CNN
 F 1 "AudioJack2_SwitchT" H 12871 7774 50  0000 R CNN
-F 2 "Local.pretty:PJ398SM" H 13050 7750 50  0001 C CNN
+F 2 "Local:PJ398SM" H 13050 7750 50  0001 C CNN
 F 3 "~" H 13050 7750 50  0001 C CNN
 	1    13050 7750
 	-1   0    0    1   
@@ -2720,7 +2709,7 @@ AR Path="/5FB86C29/5FE74ABB" Ref="J?"  Part="1"
 AR Path="/5FE74ABB" Ref="J18"  Part="1" 
 F 0 "J18" H 12871 8133 50  0000 R CNN
 F 1 "AudioJack2_SwitchT" H 12871 8224 50  0000 R CNN
-F 2 "Local.pretty:PJ398SM" H 13050 8200 50  0001 C CNN
+F 2 "Local:PJ398SM" H 13050 8200 50  0001 C CNN
 F 3 "~" H 13050 8200 50  0001 C CNN
 	1    13050 8200
 	-1   0    0    1   
@@ -2770,7 +2759,7 @@ AR Path="/5FB86C29/5FE74ADF" Ref="J?"  Part="1"
 AR Path="/5FE74ADF" Ref="J19"  Part="1" 
 F 0 "J19" H 12871 8583 50  0000 R CNN
 F 1 "AudioJack2_SwitchT" H 12871 8674 50  0000 R CNN
-F 2 "Local.pretty:PJ398SM" H 13050 8650 50  0001 C CNN
+F 2 "Local:PJ398SM" H 13050 8650 50  0001 C CNN
 F 3 "~" H 13050 8650 50  0001 C CNN
 	1    13050 8650
 	-1   0    0    1   
@@ -2820,7 +2809,7 @@ AR Path="/5FB86C29/5FE74B03" Ref="J?"  Part="1"
 AR Path="/5FE74B03" Ref="J20"  Part="1" 
 F 0 "J20" H 12871 9033 50  0000 R CNN
 F 1 "AudioJack2_SwitchT" H 12871 9124 50  0000 R CNN
-F 2 "Local.pretty:PJ398SM" H 13050 9100 50  0001 C CNN
+F 2 "Local:PJ398SM" H 13050 9100 50  0001 C CNN
 F 3 "~" H 13050 9100 50  0001 C CNN
 	1    13050 9100
 	-1   0    0    1   
@@ -3441,4 +3430,129 @@ F 3 "~" H 15350 6300 50  0001 C CNN
 $EndComp
 Text GLabel 15050 5950 0    50   Input ~ 0
 TRIG7
+$Comp
+L Connector:Conn_01x01_Male J22
+U 1 1 608E79F2
+P 5650 4100
+F 0 "J22" H 5758 4281 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4190 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4100 50  0001 C CNN
+F 3 "~" H 5650 4100 50  0001 C CNN
+	1    5650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J23
+U 1 1 608E967A
+P 5650 4200
+F 0 "J23" H 5758 4381 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4290 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4200 50  0001 C CNN
+F 3 "~" H 5650 4200 50  0001 C CNN
+	1    5650 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J24
+U 1 1 608E9862
+P 5650 4300
+F 0 "J24" H 5758 4481 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4390 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4300 50  0001 C CNN
+F 3 "~" H 5650 4300 50  0001 C CNN
+	1    5650 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J25
+U 1 1 608E9A83
+P 5650 4400
+F 0 "J25" H 5758 4581 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4490 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4400 50  0001 C CNN
+F 3 "~" H 5650 4400 50  0001 C CNN
+	1    5650 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J26
+U 1 1 608E9C1A
+P 5650 4500
+F 0 "J26" H 5758 4681 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4590 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4500 50  0001 C CNN
+F 3 "~" H 5650 4500 50  0001 C CNN
+	1    5650 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J27
+U 1 1 608E9F06
+P 5650 4600
+F 0 "J27" H 5758 4781 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4690 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4600 50  0001 C CNN
+F 3 "~" H 5650 4600 50  0001 C CNN
+	1    5650 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J28
+U 1 1 608EA0EE
+P 5650 4700
+F 0 "J28" H 5758 4881 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4790 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4700 50  0001 C CNN
+F 3 "~" H 5650 4700 50  0001 C CNN
+	1    5650 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J29
+U 1 1 608EA292
+P 5650 4800
+F 0 "J29" H 5758 4981 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4890 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4800 50  0001 C CNN
+F 3 "~" H 5650 4800 50  0001 C CNN
+	1    5650 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J30
+U 1 1 608EA52D
+P 5650 4900
+F 0 "J30" H 5758 5081 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 4990 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 4900 50  0001 C CNN
+F 3 "~" H 5650 4900 50  0001 C CNN
+	1    5650 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J21
+U 1 1 608EA6F6
+P 5650 3650
+F 0 "J21" H 5758 3831 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 3740 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 3650 50  0001 C CNN
+F 3 "~" H 5650 3650 50  0001 C CNN
+	1    5650 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 5850 3650 2    50   Input ~ 0
+BIAS
+$Comp
+L Connector:Conn_01x01_Male J10
+U 1 1 609123CA
+P 5650 3450
+F 0 "J10" H 5758 3631 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5758 3540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 3450 50  0001 C CNN
+F 3 "~" H 5650 3450 50  0001 C CNN
+	1    5650 3450
+	1    0    0    -1  
+$EndComp
+Text GLabel 5850 3450 2    50   Input ~ 0
+VREF
 $EndSCHEMATC
