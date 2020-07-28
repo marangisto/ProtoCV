@@ -23,14 +23,34 @@ template<> void handler<board::serial_interrupt>()
     serial::isr();
 }
 
+struct calib_t
+{
+    float v0, v1;
+};
+
+static calib_t calib[] =
+    { { 3.75656, -1.25902 }
+    , { 3.75688, -1.25824 }
+    , { 3.75614, -1.25877 }
+    , { 3.75537, -1.26138 }
+    , { 3.75619, -1.25913 }
+    , { 3.75568, -1.26095 }
+    , { 3.75546, -1.26048 }
+    , { 3.75616, -1.25911 }
+    };
+
+template<int CH>
 static uint16_t voltage(float x)
 {
-    const float vmin = -3.763;
-    const float vmax =  6.264;
+    const float v0 = calib[CH].v0;
+    const float v1 = calib[CH].v1;
+    const uint32_t k = 0xffff;
+    const uint32_t k2 = k >> 1;
+    const uint32_t k4 = k >> 2;
 
-    float y = 1. - (x - vmin) / (vmax - vmin);
+    float y = (x - v0) / (v1 - v0);
 
-    return static_cast<uint16_t>(y * 0xffff);
+    return static_cast<uint16_t>(y * k2 + k4);
 }
 
 int main()
@@ -55,19 +75,37 @@ int main()
 
     dac::write(dac::CONFIG, 0x0000);
     dac::write(dac::GAIN, 0x01ff);
-    dac::write(dac::DAC0, voltage(-3));
-    dac::write(dac::DAC1, voltage(-2));
-    dac::write(dac::DAC2, voltage(-1));
-    dac::write(dac::DAC3, voltage(1));
-    dac::write(dac::DAC4, voltage(2));
-    dac::write(dac::DAC5, voltage(3));
-    dac::write(dac::DAC6, voltage(4));
-    dac::write(dac::DAC7, voltage(5));
+
+    /*
+    // calibration settings
+  
+    static const uint32_t x0 = 0xffff >> 2;
+    static const uint32_t x1 = (0xffff >> 1) + x0;
+
+
+    dac::write(dac::DAC0, x1);
+    dac::write(dac::DAC1, x1);
+    dac::write(dac::DAC2, x1);
+    dac::write(dac::DAC3, x1);
+    dac::write(dac::DAC4, x1);
+    dac::write(dac::DAC5, x1);
+    dac::write(dac::DAC6, x1);
+    dac::write(dac::DAC7, x1);
+    */
+
+    dac::write(dac::DAC0, voltage<0>(-3));
+    dac::write(dac::DAC1, voltage<1>(-2));
+    dac::write(dac::DAC2, voltage<2>(-1));
+    dac::write(dac::DAC3, voltage<3>(1));
+    dac::write(dac::DAC4, voltage<4>(2));
+    dac::write(dac::DAC5, voltage<5>(3));
+    dac::write(dac::DAC6, voltage<6>(4));
+    dac::write(dac::DAC7, voltage<7>(5));
 
     for (int i = 0;;++i)
     {
         led::toggle();
-        /*
+ 
         trig0::write((i & 0x7) == 0);
         trig1::write((i & 0x7) == 1);
         trig2::write((i & 0x7) == 2);
@@ -76,19 +114,8 @@ int main()
         trig5::write((i & 0x7) == 5);
         trig6::write((i & 0x7) == 6);
         trig7::write((i & 0x7) == 7);
-        */
 
-        //dac::write(dac::GAIN, 0x0100);
-        uint16_t x;
-
-        x = dac::read(dac::GAIN);
-        dac::write(dac::NOP, 0);
-        //x = dac::read(dac::CONFIG);
-
-        printf<serial>("DEVICE_ID = %x\n", x);
-     //   dac::write(dac::DAC0, i);
-    //    dac::write(dac::TRIGGER, 0x10);
-        sys_tick::delay_ms(10);
+        sys_tick::delay_ms(100);
     }
 
     /*
