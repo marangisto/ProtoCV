@@ -9,7 +9,7 @@ using trig1 = output_t<PA9>;
 using trig2 = output_t<PA12>;
 using trig3 = output_t<PB0>;
 using trig4 = output_t<PB7>;
-using trig5 = output_t<PA15>;
+using trig5 = output_t<PB5>;
 using trig6 = output_t<PB6>;
 using trig7 = output_t<PA8>;
 using serial = usart_t<2, PA2, PA3>;
@@ -66,7 +66,7 @@ static void setup()
 
     dac::setup();
 
-    serial::setup<230400>();
+    serial::setup<115200>();
     interrupt::set<interrupt::USART2>();
     interrupt::enable();
 
