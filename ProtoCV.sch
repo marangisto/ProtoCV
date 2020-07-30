@@ -4,10 +4,10 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "ProtoCV"
+Date "2020-07-30"
+Rev "A"
+Comp "marangisto"
 Comment1 ""
 Comment2 ""
 Comment3 ""
