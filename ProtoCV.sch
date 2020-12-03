@@ -2022,19 +2022,6 @@ Connection ~ 5350 6950
 Wire Wire Line
 	6750 6550 6750 6450
 $Comp
-L Regulator_Linear:L7805 U?
-U 1 1 5F630377
-P 5350 6550
-AR Path="/5F606346/5F630377" Ref="U?"  Part="1" 
-AR Path="/5F630377" Ref="U7"  Part="1" 
-F 0 "U7" H 5350 6792 50  0000 C CNN
-F 1 "L7805" H 5350 6701 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 5375 6400 50  0001 L CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 5350 6500 50  0001 C CNN
-	1    5350 6550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 5F63037D
 P 4800 6750
@@ -3582,4 +3569,15 @@ Connection ~ 12150 4400
 Connection ~ 12150 5100
 Text GLabel 3600 2150 2    50   Input ~ 0
 OUT4
+$Comp
+L Local:L78L05_SOT89 U7
+U 1 1 5FCEF2AA
+P 5350 6550
+F 0 "U7" H 5350 6792 50  0000 C CNN
+F 1 "L78L05_SOT89" H 5350 6701 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5350 6750 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 5350 6500 50  0001 C CNN
+	1    5350 6550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
